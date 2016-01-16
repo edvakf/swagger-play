@@ -24,6 +24,7 @@ GET /api/pointsofinterest testdata.PointOfInterestController.list(eastingMin:Dou
 GET /api/dog testdata.DogController.list
 PUT /api/dog testdata.DogController.add1
 GET /api/cat @testdata.CatController.list
+GET /api/cat @testdata.CatController.list2(limit: Option[Int])
 PUT /api/cat @testdata.CatController.add1
 GET /api/fly testdata.FlyController.list
 PUT /api/dog testdata.DogController.add1

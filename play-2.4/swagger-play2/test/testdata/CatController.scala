@@ -52,6 +52,18 @@ class CatController extends Controller {
       request => Ok("test case")
     }
 
+    @ApiOperation(value = "List Cats with limit",
+      nickname = "listCats2",
+      notes = "Returns cats",
+      response = classOf[Cat],
+      responseContainer = "List",
+      httpMethod = "GET")
+    @ApiImplicitParams(Array(
+      new ApiImplicitParam(name = "limit", value = "Number of cats", required = false, dataType = "Int", paramType = "query")))
+    def list2(limit: Option[Int]) = Action {
+      request => Ok("test case")
+    }
+
     def no_route = Action {
       request => Ok("test case")
     }
